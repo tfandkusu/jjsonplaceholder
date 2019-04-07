@@ -1,0 +1,2 @@
+# jjsonplaceholder
+日本語使用者のためのJSONPlaceholder
