@@ -4,5 +4,5 @@
 
 ## API一覧
 
-GET	[/cards](https://jjsonplaceholder.appspot.com/cards)
+GET	[/cards](https://jjsonplaceholder.appspot.com/cards)  
 GET	[/cards/1](https://jjsonplaceholder.appspot.com/cards/1)
