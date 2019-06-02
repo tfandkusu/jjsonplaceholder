@@ -5,6 +5,7 @@ from card import Card
 import maker
 import json
 
+
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 app.config['JSON_AS_ASCII'] = False
@@ -35,4 +36,10 @@ def show_card(id):
 
 if __name__ == '__main__':
     # ローカルテスト環境
-    app.run(host='127.0.0.1', port=8080, debug=True)
+    @app.after_request
+    def add_cross_origin_header(response):
+        # Flutter Webのポート番号
+        response.headers['Access-Control-Allow-Origin'] = 'http://localhost:8080'
+        return response
+    # ポート番号
+    app.run(host='127.0.0.1', port=5000, debug=True)
